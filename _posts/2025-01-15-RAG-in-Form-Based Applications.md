@@ -263,16 +263,16 @@ sequenceDiagram
   participant L as LLM
 
   UI->>API: POST /api/profile (form payload)
-  API-->>UI: 409 VALIDATION_ERROR { code: "ADDR_POLICY_12" }
+  API-->>UI: 409 VALIDATION_ERROR (ADDR_POLICY_12)
 
-  UI->>RAG: POST /rag/explain-error { code, maskedContext }
+  UI->>RAG: POST /rag/explain-error (code, maskedContext)
   RAG->>V: Retrieve doc snippets for code ADDR_POLICY_12
   V-->>RAG: Policy excerpt + examples
   RAG->>L: Generate explanation + actionable steps
-  L-->>RAG: "Address line 2 required for X; examples..."
+  L-->>RAG: Address line 2 required for X; examples follow
   RAG-->>UI: Guidance response with doc references
 
-  Note over UI: UI shows helpful guidance instead of cryptic error codes.
+  Note over UI: UI shows helpful guidance instead of cryptic error codes
 ```
 
 ### RAG decision matrix as a flowchart
