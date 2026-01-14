@@ -1,0 +1,21 @@
+title: "Architecture Notes"
+email: ""
+description: "Software architecture notes, patterns, trade-offs, and case studies."
+baseurl: ""
+url: "https://alavillinaveen.github.io"
+github_username: "alavillinaveen"
+
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+show_excerpts: true
+
+minima:
+  date_format: "%b %-d, %Y"
+  skin: classic
+
+header_pages:
+  - about.md
