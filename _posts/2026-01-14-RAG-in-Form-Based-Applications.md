@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "RAG for Form-Based Applications: Decision Guide and Reference Architecture"
-date: 2025-01-14 08:30:00 -0700
+date: 2026-01-14 08:30:00 -0700
 categories: [architecture, machine-learning]
 tags: [rag, ml, dotnet, forms]
 ---

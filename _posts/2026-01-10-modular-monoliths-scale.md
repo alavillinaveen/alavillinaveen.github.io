@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Scaling with a Modular Monolith"
-date: 2025-01-10 08:30:00 -0700
+date: 2026-01-10 08:30:00 -0700
 categories: [architecture, evolution]
 tags: [monolith, modularity, scaling]
 ---
