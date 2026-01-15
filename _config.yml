@@ -5,10 +5,7 @@ baseurl: ""
 url: "https://alavillinaveen.github.io"
 github_username: "naveenalavilli"
 twitter_username: "naveenalavilli"
-
-author:
-  name: "Naveen Alavilli"
-  email: "hi@naveenalavilli.dev"
+author: "Naveen Alavilli"
 
 logo: "/assets/images/arch-bytes-logo.svg"
 image: "/assets/images/arch-bytes-card.svg"
