@@ -446,7 +446,7 @@ Rel(otel, aii, "Export")
 
 ## .NET implementation skeleton (RAG Gateway)
 
-This is a Minimal API skeleton you can drop into a new project.
+This is a Minimal API skeleton you can use for reference.
 
 ### Contracts (DTOs)
 
@@ -791,8 +791,7 @@ app.MapPost("/rag/explain-error", async (
 app.Run();
 ```
 
-Next steps: replace `InMemoryRetriever` with Azure AI Search / Pinecone / Qdrant and replace
-`FakeGenerator` with Azure OpenAI / OpenAI.
+Next steps: replace `InMemoryRetriever` with Azure AI Search / Pinecone / Qdrant and replace `FakeGenerator` with Azure OpenAI / OpenAI.
 
 ## Angular UX pattern (debounced, cached, non-blocking)
 
