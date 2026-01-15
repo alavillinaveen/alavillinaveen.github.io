@@ -294,11 +294,9 @@ flowchart LR
 
 This is how you keep RAG from becoming a black box.
 
-## Mermaid C4 model (optional architecture docs)
+## C4 model reference 
 
-Mermaid C4 diagrams require Mermaid C4 support (Mermaid 10+).
-
-### C4 context
+### Context
 
 ```mermaid
 C4Context
@@ -329,7 +327,7 @@ Rel(rag, obs, "Logs metrics/traces", "OTEL")
 Rel(api, obs, "Logs metrics/traces", "OTEL")
 ```
 
-### C4 container
+### Container
 
 ```mermaid
 C4Container
@@ -364,7 +362,7 @@ Rel(api, obs, "Traces/metrics/logs")
 Rel(spa, obs, "Front-end telemetry (optional)")
 ```
 
-### C4 component (RAG Gateway internals)
+### Component (RAG Gateway internals)
 
 ```mermaid
 C4Component
@@ -398,7 +396,7 @@ Rel(gen, obs, "Emit token + latency data")
 Rel(retr, obs, "Emit docIds used")
 ```
 
-### C4 deployment
+### Deployment
 
 ```mermaid
 C4Deployment
