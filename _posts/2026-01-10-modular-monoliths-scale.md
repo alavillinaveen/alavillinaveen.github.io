@@ -10,6 +10,8 @@ A modular monolith keeps deployment simple while still enforcing boundaries. It 
 first step than jumping directly to microservices because it avoids distributed systems overhead
 while still organizing the system into clear, independent areas of responsibility.
 
+<!--more-->
+
 ## What makes it modular
 
 - Clear module ownership and interfaces. Each module has a public surface area and hides its

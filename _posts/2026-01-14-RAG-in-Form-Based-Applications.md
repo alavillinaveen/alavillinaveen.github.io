@@ -10,6 +10,8 @@ Forms already handle a lot of dynamic behavior through deterministic code. RAG c
 when the problem requires interpretation that rules and APIs cannot express. This guide is
 practical and opinionated for architects building form-heavy systems.
 
+<!--more-->
+
 ## Audience
 
 - Angular, React, or similar frontend architects.

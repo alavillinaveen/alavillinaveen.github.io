@@ -4,6 +4,14 @@ description: "Software architecture notes, patterns, trade-offs, and case studie
 baseurl: ""
 url: "https://alavillinaveen.github.io"
 github_username: "naveenalavilli"
+twitter_username: "naveenalavilli"
+
+author:
+  name: "Naveen Alavilli"
+  email: "hi@naveenalavilli.dev"
+
+logo: "/assets/images/arch-bytes-logo.svg"
+image: "/assets/images/arch-bytes-card.svg"
 
 theme: minima
 
@@ -12,6 +20,7 @@ plugins:
   - jekyll-seo-tag
 
 show_excerpts: true
+excerpt_separator: "<!--more-->"
 
 minima:
   date_format: "%b %-d, %Y"

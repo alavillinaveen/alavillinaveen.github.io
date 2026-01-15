@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Arch Bytes logo">
+  <rect width="512" height="512" fill="#0f172a"/>
+  <rect x="48" y="48" width="416" height="416" rx="48" fill="#1e293b"/>
+  <text x="256" y="235" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" fill="#e2e8f0" font-weight="700">Arch</text>
+  <text x="256" y="320" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="64" fill="#38bdf8" font-weight="700">Bytes</text>
+</svg>
