@@ -1031,7 +1031,7 @@ Template:
 - Log prompts, sources, and outputs for auditability.
 - Use rate limits and explicit user disclaimers.
 
-## Recommended architect rules (short and sharp)
+## Recommended architect rules
 
 1. RAG is not authoritative. Domain logic stays in ASP.NET Core services.
 2. RAG is optional. Form UX must function if RAG is down.
@@ -1048,5 +1048,4 @@ Template:
 
 ## TLDR
 
-If your form logic can be expressed as code, do not use RAG. If your form logic depends on
-interpretation, policy, or ambiguity, RAG can add real value.
+If your form logic can be expressed as code, do not use RAG. If your form logic depends on interpretation, policy, or ambiguity, RAG can add real value.
