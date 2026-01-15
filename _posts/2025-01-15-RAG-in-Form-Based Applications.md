@@ -269,7 +269,7 @@ sequenceDiagram
   RAG->>V: Retrieve doc snippets for code ADDR_POLICY_12
   V-->>RAG: Policy excerpt + examples
   RAG->>L: Generate explanation + actionable steps
-  L-->>RAG: Address line 2 required for X; examples follow
+  L-->>RAG: Address line 2 required for X, examples follow
   RAG-->>UI: Guidance response with doc references
 
   Note over UI: UI shows helpful guidance instead of cryptic error codes
