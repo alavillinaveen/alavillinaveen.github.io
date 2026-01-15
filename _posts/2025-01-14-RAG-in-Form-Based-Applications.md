@@ -33,8 +33,7 @@ State selected   -> API call -> fetch cities
 City selected    -> API call -> fetch postal codes
 ```
 
-This approach is deterministic, fast, cacheable, auditable, and easy to test. It does not need AI,
-and it does not need RAG.
+This approach is deterministic, fast, cacheable, auditable, and easy to test. It does not need AI, and it does not need RAG.
 
 ## What RAG is (and is not) for forms
 
@@ -43,8 +42,7 @@ Retrieval-Augmented Generation (RAG) is a system where:
 1. Relevant information is retrieved from knowledge sources.
 2. A language model uses that context to generate a response.
 
-In form-based applications, RAG is a read-only, assistive layer. It must never be authoritative,
-and it must never mutate state.
+In form-based applications, RAG is a read-only, assistive layer. It must never be authoritative, and it must never mutate state.
 
 ## The decision test
 
@@ -52,8 +50,7 @@ Ask one question:
 
 "Can I clearly define the input -> output mapping in advance?"
 
-If yes, use APIs, rules, configuration, lookup tables, or schema validation. If no, RAG becomes a
-candidate.
+If yes, use APIs, rules, configuration, lookup tables, or schema validation. If no, RAG becomes a candidate.
 
 ## Where RAG is overkill
 
@@ -66,8 +63,7 @@ candidate.
 | Validation rules       | Schema / Regex |
 | Mandatory fields       | Business rules |
 
-RAG adds latency, cost, non-determinism, and testing complexity. Do not use it for dropdowns,
-validation, or reference data.
+RAG adds latency, cost, non-determinism, and testing complexity. Do not use it for dropdowns, validation, or reference data.
 
 ## Legitimate RAG use cases in form systems
 
@@ -79,8 +75,7 @@ RAG can retrieve internal policies and historical errors and generate a human-re
 
 ### Domain-specific interpretation across jurisdictions
 
-Global forms must handle different legal requirements and exceptions. RAG can retrieve
-country-specific documentation and explain why a field is required.
+Global forms must handle different legal requirements and exceptions. RAG can retrieve country-specific documentation and explain why a field is required.
 
 ### Free-text inputs that drive structured outcomes
 
@@ -90,8 +85,7 @@ RAG can map free text to structured categories and suggest which sections of the
 
 ### Embedded knowledge in regulated workflows
 
-Healthcare, legal, HR, and government forms often require policy context. RAG can surface the right
-guidance without exposing raw documents.
+Healthcare, legal, HR, and government forms often require policy context. RAG can surface the right guidance without exposing raw documents.
 
 ## Decision matrix: API vs rules vs RAG
 
@@ -107,8 +101,7 @@ guidance without exposing raw documents.
 
 ## Hybrid architecture (recommended)
 
-RAG works best as an assistive layer, not a replacement for deterministic logic. Your form must
-still function if RAG is down.
+RAG works best as an assistive layer, not a replacement for deterministic logic. Your form must still function if RAG is down.
 
 ```text
 Form interaction
@@ -118,7 +111,7 @@ Form interaction
 
 Think of RAG as a senior colleague next to the form, not the database behind it.
 
-## Diagram-heavy reference architecture
+## Reference architecture
 
 ### System context diagram
 
@@ -220,7 +213,6 @@ flowchart LR
 ```
 
 Implementation note:
-
 - Do not send raw first/last name, full address, phone, SSN, or DOB to RAG without strong governance.
 - Prefer field-level summarization ("Country=US, State empty, City filled, Zip invalid") over raw values.
 
