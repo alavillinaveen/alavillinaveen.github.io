@@ -13,8 +13,8 @@ Open Notebook is a self-hosted, privacy-first alternative to NotebookLM. It runs
 <!--more-->
 
 Source and attribution:
-- Project repository: https://github.com/naveenalavilli/open-notebook
-- Original codebase credit: https://github.com/lfnovo/open-notebook
+- Project repository: github/naveenalavilli/open-notebook [https://github.com/naveenalavilli/open-notebook]
+- Original codebase credit: github/lfnovo/open-notebook [https://github.com/lfnovo/open-notebook]
 
 ---
 
