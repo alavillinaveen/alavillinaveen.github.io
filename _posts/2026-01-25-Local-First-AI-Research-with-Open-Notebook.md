@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Local-First AI Research with Open Notebook"
-date: 2026-01-18 08:30:00 -0700
+date: 2026-01-25 08:30:00 -0700
 categories: [ai, research]
 tags: [local-first, notebook, privacy, reproducibility, tooling]
 ---
