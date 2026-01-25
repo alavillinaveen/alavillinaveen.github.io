@@ -6,9 +6,7 @@ categories: [ai, research]
 tags: [local-first, notebook, privacy, reproducibility, tooling]
 ---
 
-# Local-First AI Research with Open Notebook
-
-This architect-focused brief explains how Open Notebook reduces AI costs and improves data compliance by keeping organizational data inside your premises. It is designed for security, infrastructure, and enterprise architects evaluating on-prem or edge AI.
+This brief explains how Open Notebook reduces AI costs and improves data compliance by keeping organizational data inside your premises. It is designed for teams evaluating on-prem or edge AI.
 
 Open Notebook is a self-hosted, privacy-first alternative to NotebookLM. It runs a Next.js UI, FastAPI backend, SurrealDB storage, and optional local LLMs through Ollama. Cloud models are supported via OpenRouter, but they are opt-in.
 
@@ -20,7 +18,7 @@ Source and attribution:
 
 ---
 
-## Executive Summary
+## Overview
 
 - **Local-first by default**: UI, API, database, and content storage run on your infrastructure.
 - **Cost control**: Use local inference for zero per-token costs, or selectively use OpenRouter for burst quality.
@@ -208,14 +206,6 @@ Choose one or combine both. Local-first keeps data on premises; OpenRouter adds 
 4. Configure `docker.env` and start the stack.
 5. Define backups and data retention policies.
 6. Validate with non-sensitive data before production use.
-
----
-
-## Recommended Starting Points
-
-- Local install guide: `docs/0-START-HERE/quick-start-local.md`
-- Ollama setup: `docs/5-CONFIGURATION/ollama.md`
-- Security configuration: `docs/5-CONFIGURATION/security.md`
 
 ---
 
