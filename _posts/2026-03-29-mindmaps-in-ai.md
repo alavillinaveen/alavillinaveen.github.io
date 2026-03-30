@@ -13,8 +13,6 @@ answers, better plans, and better summaries.
 
 <!--more-->
 
-![Mindmaps in AI](/assets/images/arch-bytes-card.svg)
-
 ## Why Mindmaps Work Well with AI
 
 AI models are strong at pattern matching, but they still need clean context.
