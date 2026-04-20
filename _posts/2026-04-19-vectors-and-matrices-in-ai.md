@@ -428,7 +428,7 @@ For professionals:
 
 ## From Mindmaps to Machine Representation
 
-In the published post, [Mindmaps in AI](https://alavillinaveen.github.io/ai/thinking/2026/03/29/mindmaps-in-ai.html),
+In the previous post, [Mindmaps in AI](https://alavillinaveen.github.io/ai/thinking/2026/03/29/mindmaps-in-ai.html),
 the focus was on structuring ideas so humans and AI systems can work with them
 more clearly.
 
@@ -452,25 +452,6 @@ flowchart LR
   D --> E[Matrices]
   E --> F[AI Similarity and Transformation]
 ```
-
-## Common Mistakes and Fixes
-
-- **Mistake**: Thinking a vector is only an arrow from school geometry.
-  **Fix**: In AI, a vector is usually an ordered list of features.
-- **Mistake**: Thinking a matrix is just an exam exercise.
-  **Fix**: In AI, a matrix is often the data table or weight table that powers a model.
-- **Mistake**: Ignoring the meaning of each position in a vector.
-  **Fix**: Order matters. `[math, physics, chemistry]` is not the same as `[chemistry, math, physics]`.
-- **Mistake**: Assuming larger vectors are always better.
-  **Fix**: More dimensions can help, but they also add complexity, cost, and noise.
-
-## Ready-to-Remember Summary
-
-- A vector is one ordered list of numbers.
-- A matrix is a table made from many vectors.
-- AI uses vectors to represent items and matrices to process many items.
-- Similarity helps AI compare users, products, documents, and ideas.
-- Matrix multiplication is one of the core operations behind machine learning.
 
 Vectors and matrices are not extra decoration around AI. They are part of the
 basic language machines use to represent, compare, and transform information.
