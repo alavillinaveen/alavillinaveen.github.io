@@ -7,9 +7,8 @@ tags: [vectors, matrices, linear-algebra, machine-learning]
 ---
 
 If mindmaps help humans organize ideas, vectors help machines organize meaning.
-This post explains vectors, matrices, and similarity in plain language for high
-school students, college learners, engineers, and professionals who want to
-understand the math behind modern AI without getting lost in heavy notation.
+This post explains vectors, matrices, and similarity in plain language to
+understand the math behind modern AI without getting lost in heavy notations.
 
 The code examples use both Python and C# so the same ideas are easier to map to
 data-science workflows and .NET application design.
@@ -393,7 +392,7 @@ for (int i = 0; i < finalScores.Length; i++)
 }
 ```
 
-For architects, this is the practical bridge:
+This is the practical bridge:
 
 - One row can represent one record, user, or document.
 - One column can represent one feature.
@@ -411,7 +410,7 @@ Many AI systems can be understood like this:
 
 That is not the full story, but it is a very good starting point.
 
-## Why This Matters for Students and Professionals
+## Why This Matters 
 
 For students:
 
