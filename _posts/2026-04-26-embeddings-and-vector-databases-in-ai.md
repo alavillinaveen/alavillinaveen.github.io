@@ -6,7 +6,7 @@ categories: [ai, retrieval]
 tags: [embeddings, vector-databases, semantic-search, pgvector, dotnet]
 ---
 
-In [Vectors and Matrices in AI]({% post_url 2026-04-19-vectors-and-matrices-in-ai %}),
+In [Vectors and Matrices in AI](https://alavillinaveen.github.io/ai/mathematics/2026/04/19/vectors-and-matrices-in-ai.html),
 the focus was on how AI systems represent information numerically. That
 foundation leads to the next practical question: once text, images, or records
 can be represented as vectors, how does a system search, compare, and retrieve
@@ -15,10 +15,6 @@ them at scale?
 Embeddings and vector databases answer that question. They take the mathematical
 ideas behind vectors and similarity and turn them into a practical retrieval
 system for meaning-based search.
-
-This article is written in plain language for high school learners, engineers,
-architects, and professionals who want to understand how semantic search works
-in real systems.
 
 The code examples use SQL, Python, and C# so the same ideas can be connected to
 data workflows and .NET application design.
@@ -306,35 +302,6 @@ Good retrieval systems combine:
 - Metadata filters for control
 - Ranking logic for relevance
 
-## Common Mistakes and Fixes
-
-- **Mistake**: Storing vectors without the original text.
-  **Fix**: Always keep the source content and identifiers with the embedding.
-- **Mistake**: Mixing embeddings from different models in the same field.
-  **Fix**: Use one embedding model per indexed collection unless migration is carefully managed.
-- **Mistake**: Using only vector similarity when exact filters are required.
-  **Fix**: Keep metadata and structured filters in the design.
-- **Mistake**: Assuming vector search understands everything.
-  **Fix**: Retrieval improves relevance, but it does not guarantee correctness.
-- **Mistake**: Using toy examples as if they reflect production scale.
-  **Fix**: Real systems need evaluation, indexing strategy, latency checks, and governance.
-
-## Where This Helps Most
-
-- Study-note search for students
-- Enterprise policy assistants
-- Internal knowledge retrieval
-- Support article matching
-- Product discovery
-- Resume and job matching
-
-## Ready-to-Remember Summary
-
-- An embedding is a vector that represents meaning.
-- A vector database retrieves nearby vectors instead of exact keyword matches.
-- Semantic search helps connect similar meaning across different wording.
-- Metadata is still necessary for filtering, safety, and control.
-- The same retrieval pattern works in SQL, Python, and C#.
 
 Embeddings and vector databases are not separate from the math of AI. They are
 practical systems built on top of vectors, similarity, and structured data.
