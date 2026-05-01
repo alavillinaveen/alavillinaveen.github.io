@@ -18,7 +18,7 @@ system for meaning-based search.
 
 This is also why so many teams encounter vector databases while building
 RAG (Retrieval-Augmented Generation) systems: they want AI answers grounded in
-retrieved source material so hallucinations are reduced instead of left
+retrieved source material so hallucinations are reduced rather than left
 unchecked.
 
 The code examples use SQL, Python, and C# so the same ideas can be connected to
@@ -26,14 +26,15 @@ data workflows and .NET application design.
 
 <!--more-->
 
-## Why RAG Brings People Here
+## Why Most Teams Meet Vector Databases Through RAG
 
 RAG is a pattern where an application first retrieves relevant documents,
 policies, notes, or product records and then gives that material to a language
 model as context before the model writes a response. In simple terms, the model
 does not answer from memory alone. It answers with retrieved evidence in view.
 That does not guarantee correctness, but it usually improves relevance,
-traceability, and factual grounding.
+traceability, and factual grounding. In many modern AI applications, the vector
+database is the retrieval layer that makes this possible.
 
 ```mermaid
 flowchart LR
@@ -44,7 +45,7 @@ flowchart LR
   L --> A[Grounded Answer]
 ```
 
-## Why This Topic Matters
+## Why Vector Search Matters
 
 A normal database is very good at exact matching:
 
@@ -85,7 +86,7 @@ Example idea:
 These sentences use different words, but their meaning is similar. A good
 embedding model can place them near each other in vector space.
 
-## Daily-Life Examples of Embeddings
+## Where Embeddings Show Up
 
 ### 1. School notes search
 
@@ -130,7 +131,7 @@ still bring the right items forward.
 A user pastes an error description in free text. The system retrieves the most
 similar troubleshooting articles, even when the wording is not identical.
 
-## Why Keyword Search Is Not Enough
+## Why Keywords Alone Fall Short
 
 Keyword search is still useful, but it has limits:
 
@@ -140,12 +141,17 @@ Keyword search is still useful, but it has limits:
 - It struggles when the query is phrased differently from the source text.
 
 Embeddings do not replace all search methods, but they make meaning-based
-retrieval possible.
+retrieval possible. In practice, many production systems use both keyword and
+vector search together.
 
-## Relational Databases vs. Vector Databases
+## When to Use Relational vs. Vector Search
 
 Relational databases and vector databases solve different search problems. In
-many real systems, they are used together rather than as replacements.
+many real systems, they are used together rather than as replacements. A useful
+mental shortcut is:
+
+- Relational search finds exact facts.
+- Vector search finds nearest meaning.
 
 | Aspect | Relational database | Vector database |
 | --- | --- | --- |
@@ -159,7 +165,7 @@ many real systems, they are used together rather than as replacements.
 One practical pattern is to keep authoritative business data in a relational
 database and add vector search for retrieval-heavy features.
 
-## What a Vector Database Actually Does
+## What a Vector Database Stores and Returns
 
 A vector database stores vectors and retrieves the nearest matches.
 
@@ -176,12 +182,15 @@ When a query comes in:
 3. Metadata filters narrow the results when needed.
 4. The application returns the most relevant content.
 
+At larger scale, these systems usually rely on approximate nearest-neighbor
+indexes so retrieval stays fast without comparing every vector one by one.
+
 The storage engine does not need to be a separate product. Some teams start
 with PostgreSQL plus `pgvector`. Others use tools such as `ChromaDB` for local
 or open-source workflows, or `Milvus` when they need a system designed for
 larger-scale vector search.
 
-## A Simple Mental Model
+## Retrieval Flow at a Glance
 
 The process can be seen as:
 
@@ -200,7 +209,7 @@ For .NET teams, this often becomes:
 ASP.NET Core API -> Embedding Service -> Vector Search -> Retrieved Context -> Response
 ```
 
-## A Small Example Dataset
+## Toy Dataset for Intuition
 
 Real embeddings often contain hundreds or thousands of dimensions. The examples
 below use only 3 dimensions so the structure is easy to read.
@@ -337,7 +346,7 @@ with psycopg.connect(
 The important idea is not the language. The important idea is that the same
 vector search pattern works across application stacks.
 
-## Why Metadata Still Matters
+## Why Metadata Still Matters in Production
 
 Vector similarity alone is not enough for production systems.
 
@@ -354,6 +363,11 @@ Good retrieval systems combine:
 - Metadata filters for control
 - Ranking logic for relevance
 
+## Bottom Line
 
 Embeddings and vector databases are not separate from the math of AI. They are
-practical systems built on top of vectors, similarity, and structured data.
+practical systems built on top of vectors, similarity, and structured data. In
+a RAG application, they are usually the layer that finds the right context
+before the model responds. The business system still needs relational data,
+filters, and application logic, but vector search adds the missing ability to
+retrieve by meaning instead of by exact wording.
