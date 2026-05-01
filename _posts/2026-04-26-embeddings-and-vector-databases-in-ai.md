@@ -209,7 +209,7 @@ For .NET teams, this often becomes:
 ASP.NET Core API -> Embedding Service -> Vector Search -> Retrieved Context -> Response
 ```
 
-## Toy Dataset for Intuition
+## Example Dataset for Intuition
 
 Real embeddings often contain hundreds or thousands of dimensions. The examples
 below use only 3 dimensions so the structure is easy to read.
@@ -277,7 +277,7 @@ using Npgsql;
 var queryEmbedding = "[0.91,0.10,0.82]";
 
 await using var connection = new NpgsqlConnection(
-    "Host=localhost;Username=postgres;Password=postgres;Database=ai_demo");
+    "Host=localhost;Username=;Password=;Database=ai_demo");
 
 await connection.OpenAsync();
 
@@ -323,7 +323,7 @@ import psycopg
 query_embedding = "[0.91,0.10,0.82]"
 
 with psycopg.connect(
-    "dbname=ai_demo user=postgres password=postgres host=localhost"
+    "dbname=ai_demo user= password= host=localhost"
 ) as conn:
     with conn.cursor() as cur:
         cur.execute(
@@ -343,8 +343,7 @@ with psycopg.connect(
             print(round(score, 3), content)
 ```
 
-The important idea is not the language. The important idea is that the same
-vector search pattern works across application stacks.
+The important idea is that the same vector search pattern works across application stacks.
 
 ## Why Metadata Still Matters in Production
 
@@ -363,11 +362,11 @@ Good retrieval systems combine:
 - Metadata filters for control
 - Ranking logic for relevance
 
-## Bottom Line
+## TLDR;
 
 Embeddings and vector databases are not separate from the math of AI. They are
 practical systems built on top of vectors, similarity, and structured data. In
 a RAG application, they are usually the layer that finds the right context
 before the model responds. The business system still needs relational data,
 filters, and application logic, but vector search adds the missing ability to
-retrieve by meaning instead of by exact wording.
+retrieve by meaning instead of by exact wording/parameters.
