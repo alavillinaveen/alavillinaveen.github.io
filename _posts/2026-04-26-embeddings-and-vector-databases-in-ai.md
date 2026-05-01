@@ -21,10 +21,10 @@ RAG (Retrieval-Augmented Generation) systems: they want AI answers grounded in
 retrieved source material so hallucinations are reduced rather than left
 unchecked.
 
+<!--more-->
+
 The code examples use SQL, Python, and C# so the same ideas can be connected to
 data workflows and .NET application design.
-
-<!--more-->
 
 ## Why Most Teams Meet Vector Databases Through RAG
 
