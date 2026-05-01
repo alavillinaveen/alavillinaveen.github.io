@@ -16,10 +16,33 @@ Embeddings and vector databases answer that question. They take the mathematical
 ideas behind vectors and similarity and turn them into a practical retrieval
 system for meaning-based search.
 
+This is also why so many teams encounter vector databases while building
+RAG (Retrieval-Augmented Generation) systems: they want AI answers grounded in
+retrieved source material so hallucinations are reduced instead of left
+unchecked.
+
 The code examples use SQL, Python, and C# so the same ideas can be connected to
 data workflows and .NET application design.
 
 <!--more-->
+
+## Why RAG Brings People Here
+
+RAG is a pattern where an application first retrieves relevant documents,
+policies, notes, or product records and then gives that material to a language
+model as context before the model writes a response. In simple terms, the model
+does not answer from memory alone. It answers with retrieved evidence in view.
+That does not guarantee correctness, but it usually improves relevance,
+traceability, and factual grounding.
+
+```mermaid
+flowchart LR
+  U[User Question] --> R[Retriever]
+  R --> V[Vector Search]
+  V --> C[Relevant Chunks]
+  C --> L[LLM with Context]
+  L --> A[Grounded Answer]
+```
 
 ## Why This Topic Matters
 
@@ -36,6 +59,13 @@ But AI systems often need something different:
 - Find support articles related to an error message even when wording changes
 
 That is where embeddings and vector databases become useful.
+
+They are also useful far beyond generic "AI chat" scenarios. Common examples
+include:
+
+- Recommendation engines that match users to products, movies, or songs.
+- Semantic search that finds related meaning instead of exact keywords.
+- Image retrieval that finds visually or conceptually similar images.
 
 ## What an Embedding Is
 
@@ -112,6 +142,23 @@ Keyword search is still useful, but it has limits:
 Embeddings do not replace all search methods, but they make meaning-based
 retrieval possible.
 
+## Relational Databases vs. Vector Databases
+
+Relational databases and vector databases solve different search problems. In
+many real systems, they are used together rather than as replacements.
+
+| Aspect | Relational database | Vector database |
+| --- | --- | --- |
+| Best at | Exact matches, joins, transactions, reports | Similarity search, nearest neighbors, semantic retrieval |
+| Query style | `WHERE`, `JOIN`, aggregates, ordering | "Find the closest vectors to this query embedding" |
+| Typical data | Rows, columns, keys, constraints | Embeddings plus source text and metadata |
+| Strength | Precision and structured integrity | Meaning-based matching across different wording |
+| Weakness | Poor at paraphrases and semantic similarity | Not a substitute for transactions or strict relational logic |
+| Common use | Orders, users, invoices, audit data | RAG context lookup, recommendations, image/text similarity |
+
+One practical pattern is to keep authoritative business data in a relational
+database and add vector search for retrieval-heavy features.
+
 ## What a Vector Database Actually Does
 
 A vector database stores vectors and retrieves the nearest matches.
@@ -128,6 +175,11 @@ When a query comes in:
 2. The database searches for nearby vectors.
 3. Metadata filters narrow the results when needed.
 4. The application returns the most relevant content.
+
+The storage engine does not need to be a separate product. Some teams start
+with PostgreSQL plus `pgvector`. Others use tools such as `ChromaDB` for local
+or open-source workflows, or `Milvus` when they need a system designed for
+larger-scale vector search.
 
 ## A Simple Mental Model
 
